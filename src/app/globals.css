@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* DEFAULT THEME: RETRO */
+    --background: 240 10% 4%;
+    --foreground: 210 40% 98%;
+    --card: 240 10% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 240 10% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 291 88% 68%; /* Electric Purple */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 98 100% 53%; /* Neon Green */
+    --accent-foreground: 240 10% 4%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 10% 20%;
+    --input: 240 10% 15%;
+    --ring: 98 100% 53%;
+    --radius: 0rem;
+
+    --chart-1: 291 88% 68%;
+    --chart-2: 98 100% 53%;
+    --chart-3: 50 95% 55%;
+    --chart-4: 280 90% 60%;
+    --chart-5: 200 90% 60%;
+  }
+
+  .theme-fire {
+    /* ALTERNATE THEME: FIRE */
+    --background: 20 14% 4%;
+    --foreground: 20 5% 95%;
+    --card: 20 14% 8%;
+    --card-foreground: 20 5% 95%;
+    --popover: 20 14% 4%;
+    --popover-foreground: 20 5% 95%;
+    --primary: 48 96% 57%; /* Yellow */
+    --primary-foreground: 20 14% 4%;
+    --secondary: 20 14% 12%;
+    --secondary-foreground: 20 5% 95%;
+    --muted: 20 14% 12%;
+    --muted-foreground: 20 5% 65%;
+    --accent: 0 84% 60%; /* Red */
+    --accent-foreground: 20 5% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 20 14% 20%;
+    --input: 20 14% 15%;
+    --ring: 48 96% 57%;
+    
+    --chart-1: 48 96% 57%;
+    --chart-2: 0 84% 60%;
+    --chart-3: 30 90% 55%;
+    --chart-4: 20 80% 60%;
+    --chart-5: 10 70% 50%;
+  }
+
+  .dark {
+    /* This class is used by Tailwind's dark mode, but the variables are defined in :root and .theme-fire */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 6px 100%;
+  }
+}
+
+.pixel-corners {
+  clip-path: none;
+}
+.pixel-corners-top {
+  clip-path: none;
+}
+.pixel-border {
+  border-width: 2px;
+  border-style: solid;
+  border-color: hsl(var(--border));
+}
+.pixel-border::after {
+  content: none;
+}

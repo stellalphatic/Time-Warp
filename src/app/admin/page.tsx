@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -120,7 +121,7 @@ export default function AdminPage() {
         <CardHeader>
           <CardTitle className="font-headline text-xl text-primary">All Users</CardTitle>
            <CardDescription>View all registered users in the system.</CardDescription>
-        </Header>
+        </CardHeader>
         <CardContent>
             {loading ? (
                  <div className="flex justify-center items-center h-40">
